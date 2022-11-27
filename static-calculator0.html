@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор</title>
+    <style>
+        body {
+            height: 100vh;
+            background: rgb(49, 49, 49);
+            color: rgb(254, 255, 254);
+            font-family: 'Oswald';
+        }
+
+        img {
+            max-width: 100px;
+        }
+
+        h1,
+        h2 {
+            text-align: center;
+            text-shadow: 1px 1px 2px black;
+        }
+
+        .calculator {
+            margin: 100px auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            row-gap: 15px;
+
+        }
+
+        input {
+            font-size: 20px;
+            width: 400px;
+            height: 50px;
+            background: rgb(255, 255, 255);
+            border: 3px solid rgb(122, 122, 121);
+            border-radius: 5px;
+            padding-left: 10px;
+        }
+
+        input:hover {
+            transform: scale(1.02);
+        }
+
+        button {
+            cursor: pointer;
+            font-size: 30px;
+            width: 50px;
+            height: 50px;
+            background: rgb(64, 174, 79);
+            border: 2px solid rgb(67, 133, 67);
+            border-radius: 5px;
+            color: rgb(255, 255, 255);
+            margin: 5px;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+            background: rgb(67, 133, 67);
+        }
+
+        #errorMessage {
+            color: rgb(255, 44, 44)
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Калькулятор</h1>
+
+    <h2>Делить на 0 нельзя</h2>
+    <div class="calculator">
+        <input type="text" id="number1" placeholder="Type first number...">
+
+        <input type="text" id="number2" placeholder="Type second number...">
+        <div>
+            <button onclick="sum()">+</button>
+            <button onclick="minus()">-</button>
+            <button onclick="times()">*</button>
+            <button onclick="divide()">/</button>
+        </div>
+        <div id="errorMessage">
+        </div>
+
+        <input type="text" id="result" placeholder="Result">
+    </div>
+    <script src="./static-calculator0.js"></script>
+</body>
+
+</html>
